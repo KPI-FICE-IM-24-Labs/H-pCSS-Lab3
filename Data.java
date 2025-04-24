@@ -1,14 +1,17 @@
-public class Data {
-    public final int N = 8;
-    public final int P = 4;
-    public final int H = N / P;
+import java.sql.Array;
+import java.util.Arrays;
 
-    public int[] X = new int[N];
-    public int[] C = new int[N];
-    public int[] R = new int[N];
-    public int[] B = new int[N];
-    public int[][] MA = new int[N][N];
-    public int[][] MD = new int[N][N];
+public class Data {
+    public static final int N = 8;
+    public static final int P = 4;
+    public static final int H = N / P;
+
+    public static int[] X = new int[N];
+    public static int[] C = new int[N];
+    public static int[] R = new int[N];
+    public static int[] B = new int[N];
+    public static int[][] MA = new int[N][N];
+    public static int[][] MD = new int[N][N];
 
     public static int getMaxElementOfSubvector(int[] subVector) {
         int max = 0;
@@ -85,5 +88,30 @@ public class Data {
             result[i] = vector[i] * scalar;
         }
         return result;
+    }
+
+    public static void fillMA() {
+        for (int i = 0; i < MA.length; i++) {
+            Arrays.fill(MA[i], 1);
+        }
+    }
+
+    public static void fillR() {
+        Arrays.fill(R, 1);
+    }
+
+    public static void fillMD() {
+        for (int i = 0; i < MD.length; i++) {
+            Arrays.fill(MD[i], 1);
+        }
+        ++MD[0][0]; // Для демострації максимуму
+    }
+
+    public static void fillB() {
+        Arrays.fill(B, 1);
+    }
+
+    public static void resultToString() {
+        System.out.println("X: " + Arrays.toString(X));
     }
 }
