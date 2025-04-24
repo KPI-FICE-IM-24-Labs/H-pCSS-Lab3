@@ -113,4 +113,8 @@ public class Data {
     public static void resultToString() {
         System.out.println("X: " + Arrays.toString(X));
     }
+
+    public static void fillC() {
+        Arrays.fill(C, 1);
+    }
 }

@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class T1 extends Thread {
     private final Monitor monitor;
     private int a1;
@@ -49,11 +47,11 @@ public class T1 extends Thread {
             p1 = monitor.getP();
 
             // Обчислення3: Хн = p1 * a1 * Rн + e1 * Bн
-            int[] temp = Data.getSubvector(Data.R, 0, Data.H - 1);
-            int[] firstSubvector = Data.multiplyVectorByScalar(temp, a1 * p1); // p1 * a1 * Rн
+            int[] temp1 = Data.getSubvector(Data.R, 0, Data.H - 1);
+            int[] firstSubvector = Data.multiplyVectorByScalar(temp1, a1 * p1); // p1 * a1 * Rн
 
-            temp = Data.getSubvector(Data.B, 0, Data.H - 1);
-            int[] secondSubvector = Data.multiplyVectorByScalar(temp, e1); // e1 * Bн
+            int[] temp2 = Data.getSubvector(Data.B, 0, Data.H - 1);
+            int[] secondSubvector = Data.multiplyVectorByScalar(temp2, e1); // e1 * Bн
 
             int[] Xh = Data.sumTwoVectors(firstSubvector, secondSubvector);
             Data.mergeTwoVectors(Data.X, Xh, 0);

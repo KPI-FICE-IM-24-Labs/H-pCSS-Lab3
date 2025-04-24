@@ -14,7 +14,7 @@ public class T2 extends Thread {
             System.out.println("Thread T2 started");
 
             // Введення C, MA
-            monitor.setE(1);
+            Data.fillC();
             Data.fillMA();
 
             // Сигнал задачам T1, T3, T4 про введення C, MA
