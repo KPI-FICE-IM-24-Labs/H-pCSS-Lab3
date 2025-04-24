@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 public class Data {
-    public static final int N = 8;
+    public static final int N = 16;
     public static final int P = 4;
     public static final int H = N / P;
 
